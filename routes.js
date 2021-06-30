@@ -24,17 +24,19 @@ const routes = [
         }
     },
     {
-        method: '*',
-        path: '/about',
+        method: 'GET',
+        path: '/university/',
         handler: (request, h) => {
-            return 'Halaman tidak dapat diakses dengan method tersebut'
+            const {university} = request.query;
+            return `saya dari universitas ${university}`
         }
     },
     {
-        method: '*',
-        path: '/{any*}',
+        method: 'GET',
+        path: '/age/',
         handler: (request, h) => {
-            return 'Halaman tidak ditemukan'
+            const {age} = request.query;
+            return `Umur saya ${age} tahun`
         }
     }
 ];
