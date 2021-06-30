@@ -1,23 +1,26 @@
 const routes = [
     {
         method: 'GET',
-        path: '/',
+        path: '/name/{name}',
         handler: (request, h) => {
-            return 'Home Page'
-        }
-    },
-    {
-        method: '*',
-        path: '/',
-        handler: (request, h) => {
-            return 'Halaman tidak dapat diakses dengan method tersebut'
+            const {name} = request.params;
+            return `Nama saya ${name}`
         }
     },
     {
         method: 'GET',
-        path: '/about',
+        path: '/address/{address}',
         handler: (request, h) => {
-            return 'About page'
+            const {address} = request.params;
+            return `Saya tinggal di ${address}`
+        }
+    },
+    {
+        method: 'GET',
+        path: '/majority/{majority}',
+        handler: (request, h) => {
+            const {majority} = request.params;
+            return `Saya dari jurusan ${majority}`
         }
     },
     {
