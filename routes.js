@@ -43,6 +43,18 @@ const routes = [
             const {age} = request.query;
             return `Umur saya ${age} tahun`
         }
+    },
+    {
+        method: 'POST',
+        path: '/login',
+        handler: (request, h) => {
+            const {username, password} = request.payload;
+
+            if (!username && !password) {
+                return 'Akun belum terdaftar'
+            }
+            return 'Selamat anda berhasil login'
+        }
     }
 ];
 
