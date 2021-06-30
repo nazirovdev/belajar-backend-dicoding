@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nazirovdev/belajar-backend-dicoding/issues"
   },
-  "homepage": "https://github.com/nazirovdev/belajar-backend-dicoding#readme"
+  "homepage": "https://github.com/nazirovdev/belajar-backend-dicoding#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5",
+    "nodemon": "^2.0.8"
+  }
 }
