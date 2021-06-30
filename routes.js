@@ -3,8 +3,13 @@ const routes = [
         method: 'GET',
         path: '/name/{name}',
         handler: (request, h) => {
+            const lang = request.query.lang || 'null';
             const {name} = request.params;
-            return `Nama saya ${name}`
+
+            if (lang.toLowerCase() === 'id') {
+                return `nama saya ${name}`;
+            }
+            return `my name is ${name}`;
         }
     },
     {
