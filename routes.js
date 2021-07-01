@@ -30,10 +30,17 @@ const routes = [
     },
     {
         method: 'GET',
-        path: '/university/',
+        path: '/university',
         handler: (request, h) => {
             const {university} = request.query;
-            return `saya dari universitas ${university}`
+            const response = h.response({
+                status: 'success',
+                message: 'catatan berhasil ditambahkan',
+                data: {
+                    pesan: `saya dari universitas ${university}`
+                }
+            });
+            return response.code(201)
         }
     },
     {
